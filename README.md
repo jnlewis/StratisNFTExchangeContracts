@@ -4,9 +4,11 @@
 
 NFT Exchange lets you swap your NFT with any other NFT. The platform provides a safe and decentralized avenue for owners to put up their token for trade where other owners can browse and offer their own token in exchange. If the offer is accepted, the exchange takes place.
 
-[Features](#features)
-[Exchange Process](#exchange-process)
-[Technologies](#technologies)
+**Contents**
+
+- [Features](#features)
+- [Exchange Process](#exchange-process)
+- [Technologies](#technologies)
 
 ## Features
 
