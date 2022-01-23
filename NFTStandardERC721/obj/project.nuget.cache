@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "VEKVVx6RzE/TtiPEeKr86o+Oj9Cmo89fxmRPTgLnP23eowKMt90m1OmJuu4ynrGcKqAJoiP+6TsamfA64fEFwg==",
+  "success": true,
+  "projectFilePath": "/Users/jeffrey.lewis/Documents/Personal/Hackathons/Stratis/nft-exchange/src/contract/NFTStandardERC721/NFTStandardERC721.csproj",
+  "expectedPackageFiles": [
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.app/2.2.0/microsoft.netcore.app.2.2.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.dotnetapphost/2.2.0/microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.2.0/microsoft.netcore.dotnethostpolicy.2.2.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.dotnethostresolver/2.2.0/microsoft.netcore.dotnethostresolver.2.2.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.platforms/2.2.0/microsoft.netcore.platforms.2.2.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/microsoft.netcore.targets/2.0.0/microsoft.netcore.targets.2.0.0.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/jeffrey.lewis/.nuget/packages/stratis.smartcontracts/1.2.1/stratis.smartcontracts.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
