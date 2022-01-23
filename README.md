@@ -4,6 +4,10 @@
 
 NFT Exchange lets you swap your NFT with any other NFT. The platform provides a safe and decentralized avenue for owners to put up their token for trade where other owners can browse and offer their own token in exchange. If the offer is accepted, the exchange takes place.
 
+[Features](#features)
+[Exchange Process](#exchange-process)
+[Technologies](#technologies)
+
 ## Features
 
 - Interactive user interface accessible from any device with a web browser
@@ -25,6 +29,26 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 5. If seller accepts the offer: Exchange contract transfers the offering NFT to the seller and the selling NFT to the offerer, and mark both listing and offer as completed.
 6. If buyer cancels an offer, the offered NFT is transfered back to the buyer and the offer status is invalidated.
 6. If seller cancels a listing, the listed NFT is transfered back to the seller and the listing status is invalidated. For offers to this listing, the buyer can cancel the offer to reclaim their NFT.
+
+## Technologies
+
+**Frontend Application (UX)**
+
+- The front end web application is developed in React with NextJS framework.
+
+**Blockchain Smart Contract**
+
+- **NFT Contract**: Stratis Smart Contract writen in C# representing a sample NFT implementing the [ERC-721 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
+
+- **Exchange Contract**: Stratis Smart Contract writen in C# of the actual NFT Exchange contract
+
+## Live Product Preview
+
+The alpha preview of the application is available online and is supported by an offchain database.
+
+> While the web frontend is still in early stages of development and will change, the actual Smart Contract itself in this repository is near its final form.
+
+<a href="https://nftexchange.vercel.app" target="_blank">https://nftexchange.vercel.app</a>
 
 ## Developer Quick Start
 
@@ -131,26 +155,6 @@ curl --location -g --request GET 'http://localhost:38223/api/SmartContracts/rece
 
 Download the complete Postman collection.
 TODO: Postman
-
-## Technologies
-
-**Frontend Application (UX)**
-
-- The front end web application is developed in React with NextJS framework.
-
-**Blockchain Smart Contract**
-
-- **NFT Contract**: Stratis Smart Contract writen in C# representing a sample NFT implementing the [ERC-721 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
-
-- **Exchange Contract**: Stratis Smart Contract writen in C# of the actual NFT Exchange contract
-
-## Live Product Preview
-
-The alpha preview of the application is available online and is supported by an offchain database.
-
-> While the web frontend is still in early stages of development and will change, the actual Smart Contract itself in this repository is near its final form.
-
-<a href="https://nftexchange.vercel.app" target="_blank">https://nftexchange.vercel.app</a>
 
 ## Screenshots
 
