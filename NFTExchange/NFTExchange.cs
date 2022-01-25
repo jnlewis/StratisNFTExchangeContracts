@@ -57,8 +57,12 @@ public class NFTExchange : SmartContract
         this.CurrentOfferId = 0;
     }
 
-    // WIP: Currently, the token owner would have to transfer the token to the exchange contract and 
-    // then invoke this function until the OnTokenReceive function is implemented
+    /// <summary>
+    /// Creates a listing of an NFT token making it available for receiving offers.
+    /// 
+    /// WIP: Currently, the token owner would have to transfer the token to the exchange contract and
+    /// then invoke this function until the OnTokenReceive function is implemented
+    /// </summary>
     public void CreateListing(Address contract, ulong tokenId)
     {
         // Generate new listing ID
@@ -85,8 +89,12 @@ public class NFTExchange : SmartContract
         Log(new LogMessage { Action = "AcceptOffer", Message = "Successfully created listing" });
     }
 
-    // WIP: Currently, the token owner would have to transfer the token to the exchange contract and 
-    // then invoke this function until the OnTokenReceive function is implemented
+    /// <summary>
+    /// Makes an offer for an NFT listing, providing an NFT token as the offer item.
+    /// 
+    /// WIP: Currently, the token owner would have to transfer the token to the exchange contract and 
+    /// then invoke this function until the OnTokenReceive function is implemented
+    /// </summary>
     public void MakeOffer(Address contract, ulong tokenId, Address listingContract, ulong listingTokenId)
     {
         // Generate new offer ID
@@ -119,6 +127,10 @@ public class NFTExchange : SmartContract
         Log(new LogMessage { Action = "AcceptOffer", Message = "Successfully created offer" });
     }
 
+    /// <summary>
+    /// Accept an open offer and performs the exchange transaction
+    /// by transferring the offered NFT to the seller and the listed NFT to the offerer.
+    /// </summary>
     public void AcceptOffer(Address contract, ulong tokenId)
     {
         // Verify that the token is actually on offer
@@ -146,6 +158,9 @@ public class NFTExchange : SmartContract
         Log(new LogMessage { Action = "AcceptOffer", Message = "Successfully accepted offer" });
     }
 
+    /// <summary>
+    /// Cancel an open offer. Invoker must be the offerer of this offer.
+    /// </summary>
     public void CancelOffer(Address contract, ulong tokenId)
     {
         // Verify that the token is actually on offer
@@ -165,6 +180,9 @@ public class NFTExchange : SmartContract
         Log(new LogMessage { Action = "CancelOffer", Message = "Successfully cancelled offer" });
     }
 
+    /// <summary>
+    /// Cancel an open listing. Invoker must be the seller of this listing.
+    /// </summary>
     public void CancelListing(Address contract, ulong tokenId)
     {
         // Verify that the token is actually on listing

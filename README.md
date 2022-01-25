@@ -7,8 +7,18 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 **Contents**
 
 - [Features](#features)
-- [Exchange Process](#exchange-process)
+- [Process Process](#process-process)
 - [Technologies](#technologies)
+- [Live Product Preview](#technologies)
+    - [Developer Quick Start](#developer-quick-start)
+    - [Building the contracts](#building-the-contracts)
+    - [Running local chain](#running-local-chain)
+    - [Deploying the contracts](#deploying-the-contracts)
+- [Interacting With the Contracts](#interacting-with-the-contracts)
+    - [NFT Exchange Contract functions](#nft-exchange-contract-functions)
+    - [NFT Sample Contract functions](#nft-sample-contract-functions)
+- [Demo Screenshots](#demo-screenshots)
+- [License](#license)
 
 ## Features
 
@@ -18,7 +28,7 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 - See an NFT you like? Offer up an NFT to exchange for it
 - Manage your listings and offers with a single click.
 
-## Exchange Process
+## Process Flow
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/jnlewis/notai-web/main/docs/images/notai_payment_process.png" alt="Process">
@@ -40,9 +50,9 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 
 **Blockchain Smart Contract**
 
-- **NFT Contract**: Stratis Smart Contract writen in C# representing a sample NFT implementing the [ERC-721 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
+- **NFT Sample Contract**: Stratis Smart Contract writen in C# representing a sample NFT implementing the [ERC-721 standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/). This contract is used to create dummy NFT for development, testing and demo.
 
-- **Exchange Contract**: Stratis Smart Contract writen in C# of the actual NFT Exchange contract
+- **NFT Exchange Contract**: Stratis Smart Contract writen in C# of the actual NFT Exchange contract. This contract is responsible for all manner of the NFT Exchange. See [NFT Exchange Contract functions](#nft-exchange-contract-functions) for functions.
 
 ## Live Product Preview
 
@@ -155,8 +165,29 @@ curl --location -g --request GET 'http://localhost:38223/api/SmartContracts/rece
 
 ## Interacting With the Contracts
 
-Download the complete Postman collection.
-TODO: Postman
+A complete Postman collection is available for all the public functions in smart contracts.
+- Postman Collection
+- Postman Environment Config
+
+##### NFT Exchange Contract Functions
+| Function      | Description                                                                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| CreateListing | Creates a listing of an NFT token making it available for receiving offers.                                                                 |
+| MakeOffer     | Makes an offer for an NFT listing, providing an NFT token as the offer item.                                                                |
+| AcceptOffer   | Accept an open offer and performs the exchange transaction by transferring the offered NFT to the seller and the listed NFT to the offerer. |
+| CancelOffer   | Cancel an open offer. Invoker must be the offerer of this offer.                                                                            |
+| CancelListing | Cancel an open listing. Invoker must be the seller of this listing.                                                                         |
+
+
+##### NFT Sample Contract Functions
+*This is only a dummy NFT contract created for the purpose of testing and development.*
+
+| Function           | Description                                    |
+|--------------------|------------------------------------------------|
+| Mint               | Mint a new NFT.                                |
+| OwnerOf            | Gets the owner of the given token ID.          |
+| TransferFrom       | Transfer a token to the given address.         |
+| GetTokenProperties | Get the data properties of the given token ID. |
 
 ## Screenshots
 
@@ -182,7 +213,7 @@ TODO: Postman
 
 // TODO: Make an offer
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/5.png" alt=">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/5.png" alt="">
 </p>
 
 // TODO: Accept Offer
