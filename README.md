@@ -23,7 +23,7 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 ## Features
 
 - Interactive user interface accessible from any device with a web browser
-- Put NFT up for trade by creating a listin, with option to write what you're looking for in the listing
+- Put NFT up for trade by creating a listing, with option to write what you're looking for in the listing
 - Browse other listings to discover interesting NFTs
 - See an NFT you like? Offer up an NFT to exchange for it
 - Manage your listings and offers with a single click.
