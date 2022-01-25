@@ -166,8 +166,8 @@ curl --location -g --request GET 'http://localhost:38223/api/SmartContracts/rece
 ## Interacting With the Contracts
 
 A complete Postman collection is available for all the public functions in smart contracts.
-- Postman Collection
-- Postman Environment Config
+- [Postman Collection](docs/postman/StratisNFTExchange.postman_collection.json)
+- [Postman Environment Config](docs/postman/StratisNFTExchange.postman_environment.json)
 
 ##### NFT Exchange Contract Functions
 | Function      | Description                                                                                                                                 |
