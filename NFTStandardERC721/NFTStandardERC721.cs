@@ -67,21 +67,21 @@ public class NFTStandardERC721 : SmartContract
 
     public string GetTokenProperties(ulong tokenId) 
     {
-        return this.PersistentState.GetString($"TokenProperties_:{tokenId}");
+        return this.PersistentState.GetString($"TokenProperties:{tokenId}");
     }
     public void SetTokenProperties(ulong tokenId, string properties) 
     {
-        this.PersistentState.SetString($"TokenProperties_:{tokenId}", properties);
+        this.PersistentState.SetString($"TokenProperties:{tokenId}", properties);
     }
 
     public OwnerTokens GetOwnerTokens(Address owner)
     {
-        return this.PersistentState.GetStruct<OwnerTokens>($"OwnerTokens_:{owner}");
+        return this.PersistentState.GetStruct<OwnerTokens>($"OwnerTokens:{owner}");
     }
 
     private void SetOwnerTokens(Address owner, OwnerTokens tokens)
     {
-        this.PersistentState.SetStruct($"OwnerTokens_:{owner}", tokens);
+        this.PersistentState.SetStruct($"OwnerTokens:{owner}", tokens);
     }
 
 #endregion
@@ -175,7 +175,7 @@ public class NFTStandardERC721 : SmartContract
             result += "\"" + ownerTokens.TokenIds[i] + "\"";
         }
 
-        result += "[";
+        result += "]";
 
         return result;
     }
@@ -187,12 +187,12 @@ public class NFTStandardERC721 : SmartContract
     private void AddOwnerToken(Address owner, ulong tokenId) 
     {
         OwnerTokens ownerTokens = GetOwnerTokens(owner);
-        if (ownerTokens.TokenIds.Length == 0) 
+        if (ownerTokens.TokenIds is null || ownerTokens.TokenIds.Length == 0) 
         {
             ownerTokens = new OwnerTokens();
             ownerTokens.TokenIds = new ulong[1];
             ownerTokens.TokenIds[0] = tokenId;
-            this.SetOwnerTokens(owner, ownerTokens);
+            SetOwnerTokens(owner, ownerTokens);
         } 
         else 
         {
@@ -204,30 +204,33 @@ public class NFTStandardERC721 : SmartContract
                 updatedTokenOwners.TokenIds[i] = ownerTokens.TokenIds[i];
             }
 
-            updatedTokenOwners.TokenIds[ownerTokens.TokenIds.Length + 1] = tokenId;
+            updatedTokenOwners.TokenIds[ownerTokens.TokenIds.Length] = tokenId;
             
-            this.SetOwnerTokens(owner, updatedTokenOwners);
+            SetOwnerTokens(owner, updatedTokenOwners);
         }
     }
 
     private void RemoveOwnerToken(Address owner, ulong tokenId) 
     {
         OwnerTokens ownerTokens = GetOwnerTokens(owner);
-        if (ownerTokens.TokenIds.Length > 0) 
+        if (!(ownerTokens.TokenIds is null) && ownerTokens.TokenIds.Length > 0) 
         {
             OwnerTokens updatedOwnerTokens = new OwnerTokens();
-            updatedOwnerTokens.TokenIds = new ulong[ownerTokens.TokenIds.Length - 1];
-
-            int index = 0;
-            for (int i=0; i< ownerTokens.TokenIds.Length; i++) 
+            if (ownerTokens.TokenIds.Length > 1) 
             {
-                if (ownerTokens.TokenIds[i] != tokenId)
+                updatedOwnerTokens.TokenIds = new ulong[ownerTokens.TokenIds.Length - 1];
+
+                int index = 0;
+                for (int i=0; i< ownerTokens.TokenIds.Length; i++) 
                 {
-                    updatedOwnerTokens.TokenIds[index] = ownerTokens.TokenIds[i];
-                    index++;
+                    if (ownerTokens.TokenIds[i] != tokenId)
+                    {
+                        updatedOwnerTokens.TokenIds[index] = ownerTokens.TokenIds[i];
+                        index++;
+                    }
                 }
             }
-            
+
             this.SetOwnerTokens(owner, updatedOwnerTokens);
         }
     }
