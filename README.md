@@ -165,7 +165,7 @@ A complete Postman collection is available for all the public functions in smart
 - [Postman Collection](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_collection.json)
 - [Postman Environment Config](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_environment.json)
 
-<p align="center">
+<p align="center" height="500px">
     <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/postman.png" alt="">
 </p>
 
