@@ -31,18 +31,22 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 ## Process Flow
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/notai-web/main/docs/images/notai_payment_process.png" alt="Process">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/process.png" alt="Process">
 </p>
 
 1. Seller transfers their NFT to exchange contract for listing.
 2. Exchange contract creates a listing record tied to the receiving NFT and the seller address.
 3. Buyer transfers their NFT to exchange contract as offer to a listing.
-4. Exchange contract creates an offer record tied to the receiving offer NFT and the owner address, along with the selling NFT the offer is intended for.
+4. Exchange contract creates an offer record tied to the both the receiving offer and listing NFT and owners.
 5. If seller accepts the offer: Exchange contract transfers the offering NFT to the seller and the selling NFT to the offerer, and mark both listing and offer as completed.
 6. If buyer cancels an offer, the offered NFT is transfered back to the buyer and the offer status is invalidated.
 6. If seller cancels a listing, the listed NFT is transfered back to the seller and the listing status is invalidated. For offers to this listing, the buyer can cancel the offer to reclaim their NFT.
 
 ## Technologies
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/architecture.png" alt="Process">
+</p>
 
 **Frontend Application (UX)**
 
@@ -191,36 +195,22 @@ A complete Postman collection is available for all the public functions in smart
 
 ## Screenshots
 
-// TODO: Landing Page
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/1.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/mainlanding.png" alt="">
 </p>
-
-// TODO: Listings
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/2.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/create-listing.png" alt="">
 </p>
-
-// TODO: Create Listing
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/3.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/view-listing.png" alt="">
 </p>
-
-// TODO: View Listing
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/4.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/make-offer.png" alt="">
 </p>
-
-// TODO: Make an offer
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/5.png" alt="">
-</p>
-
-// TODO: Accept Offer
-<p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/6.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/view-my-offers.png" alt="">
 </p>
 
 ## License
 
-- Open source <a href="https://github.com/jnlewis/notai-web/blob/main/LICENSE">Apache-2.0 License</a>
+- Open source <a href="https://github.com/jnlewis/StratisNFTExchangeContracts/blob/main/LICENSE">Apache-2.0 License</a>
