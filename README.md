@@ -165,10 +165,6 @@ A complete Postman collection is available for all the public functions in smart
 - [Postman Collection](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_collection.json)
 - [Postman Environment Config](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_environment.json)
 
-<p align="center" height="500px">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/postman.png" alt="">
-</p>
-
 ##### NFT Exchange Contract Functions
 | Function      | Description                                                                                                                                 |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -204,7 +200,7 @@ A complete Postman collection is available for all the public functions in smart
     <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/make-offer.png" alt="">
 </p>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/view-my-offers.png" alt="">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/view-offers.png" alt="">
 </p>
 
 ## License
