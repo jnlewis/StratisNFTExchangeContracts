@@ -58,14 +58,6 @@ NFT Exchange lets you swap your NFT with any other NFT. The platform provides a 
 
 - **NFT Exchange Contract**: Stratis Smart Contract writen in C# of the actual NFT Exchange contract. This contract is responsible for all manner of the NFT Exchange. See [NFT Exchange Contract functions](#nft-exchange-contract-functions) for functions.
 
-## Live Product Preview
-
-The alpha preview of the application is available online and is supported by an offchain database.
-
-> While the web frontend is still in early stages of development and will change, the actual Smart Contract itself in this repository is near its final form.
-
-<a href="https://nftexchange.vercel.app" target="_blank">https://nftexchange.vercel.app</a>
-
 ## Developer Quick Start
 
 NFT Contract Hash & ByteCode:
@@ -91,7 +83,7 @@ Prerequisite: Download the [Stratis SmartContracts Tools](https://github.com/str
 
 1. Clone the source code from repo
 ```
-git clone <url>
+git clone https://github.com/jnlewis/StratisNFTExchangeContracts.git
 ```
 
 2. Restore the NFT Token Sample Contract
@@ -172,6 +164,10 @@ curl --location -g --request GET 'http://localhost:38223/api/SmartContracts/rece
 A complete Postman collection is available for all the public functions in smart contracts.
 - [Postman Collection](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_collection.json)
 - [Postman Environment Config](https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/Postman/StratisNFTExchange.postman_environment.json)
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/jnlewis/StratisNFTExchangeContracts/main/docs/images/postman.png" alt="">
+</p>
 
 ##### NFT Exchange Contract Functions
 | Function      | Description                                                                                                                                 |
